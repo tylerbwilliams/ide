@@ -1,0 +1,41 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	font-family: 'Segoe UI', Arial;
+}
+
+.layout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.simple.layout { }
+
+.editor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.editor textarea {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #333;
+	color: #FFF;
+	padding: 5px;
+	font-family: 'Lucida Console', 'Courier New', Courier;
+	resize: none;
+}

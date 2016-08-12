@@ -10,20 +10,24 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import promise from 'redux-promise';
 import thunk from 'redux-thunk';
 
-import { reducer as project } from './project';
-
-const create = initial => {
+const create = app => {
 	
-	const reducer = combineReducers({
-		project
-	});
+	const reducers = { };
+	for ( let [ name, reducer ] of app.reducers() )
+		reducers[name] = reducer;
+	
+	const reducer = combineReducers( reducers );
 	
 	const middleware = [
 		thunk,
 		promise
 	];
 	
-	return createStore( reducer, initial, applyMiddleware( ...middleware ));
+	const store = createStore( reducer, undefined, applyMiddleware( ...middleware ));
+	
+	app.setStore( store );
+	
+	return store;
 };
 
 export default { create };
