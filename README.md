@@ -1,3 +1,5 @@
+Contact Stephanie Curran because she needs your nerdiness and didn't save anyone's number or emails!
+
 # IDE
 
 A bare minimum IDE.  Plugin ALL the things!
